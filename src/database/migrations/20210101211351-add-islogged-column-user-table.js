@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
 module.exports = {
 
   up: (queryInterface, Sequelize) => {
     return queryInterface.addColumn(
       'users',
-      'isLogged',
+      'islogged',
       {
         type: Sequelize.BOOLEAN
       }
@@ -15,7 +15,7 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     return queryInterface.removeColumn(
       'users',
-      'isLogged',
+      'islogged',
     )
   }
 }

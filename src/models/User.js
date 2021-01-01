@@ -12,8 +12,8 @@ class User extends Model {
             sequelize,
             hooks: {
                 beforeCreate: (user) => {
-                    const salt = bcrypt.genSaltSync();
-                    user.password = bcrypt.hashSync(user.password, salt);
+                    const salt = bcrypt.genSaltSync()
+                    user.password = bcrypt.hashSync(user.password, salt)
                 },
             },
         })
@@ -21,4 +21,4 @@ class User extends Model {
 
 }
 
-module.exports = User;
+module.exports = User

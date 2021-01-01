@@ -18,8 +18,7 @@ module.exports = {
         if (!bcrypt.compareSync(password, user.password)) {
             return res.status(400).send({
                 status: 0,
-                message: 'E-mail ou senha incorreto!',
-                user: {}
+                message: 'E-mail ou senha incorreto!'
             });
         }
 
@@ -36,12 +35,10 @@ module.exports = {
         user.password = undefined
 
 
-        const token = generateToken({ id: user.id });
-
         return res.status(200).send({
             status: 1,
             message: "Usuário logado com sucesso!",
-            user, token
+            user
         });
 
 
