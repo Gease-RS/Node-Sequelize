@@ -26,7 +26,7 @@ module.exports = {
           const { user_id } = req.params
           const { name } = req.body
 
-          const user = await User.findByPk(user_id);
+          const user = await User.findByPk(user_id)
 
           if (!user) {
               return res.status(400).json({

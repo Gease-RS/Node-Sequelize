@@ -1,3 +1,4 @@
+  
 const { Model, DataTypes } = require('sequelize')
 
 class Course extends Model {
@@ -11,11 +12,7 @@ class Course extends Model {
     }
 
     static associate(models) {
-        this.belongsToMany(models.User, { 
-            foreignKey: 'course_id', 
-            through: 'user_courses', 
-            as: 'users'
-        })
+        this.belongsToMany(models.User, { foreignKey: 'course_id', through: 'user_courses', as: 'users'})
     }
 }
 
